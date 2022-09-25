@@ -1,6 +1,6 @@
 # CONFIG
-# import Blueprint
-from flask import Blueprint
+# import Blueprint and render_template
+from flask import ( Blueprint, render_template)
 
 # create new instance of Blueprint
 # then need: blueprint's name, location of blueprint, and blueprint's url prefix
@@ -13,4 +13,4 @@ bp = Blueprint(
 # INDEX ROUTE
 @bp.route('/')
 def index():
-    return "This is the pets index"
+    return render_template('index.html')
