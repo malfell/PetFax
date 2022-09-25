@@ -3,11 +3,14 @@
 from flask import Blueprint
 
 # create new instance of Blueprint
+# then need: blueprint's name, location of blueprint, and blueprint's url prefix
 bp = Blueprint(
-    # blueprint's name
     'pet',
-    # location of blueprint
     __name__,
-    # blueprint's url prefix
     url_prefix="/pets"
 )
+
+# INDEX ROUTE
+@bp.route('/')
+def index():
+    return "This is the pets index"

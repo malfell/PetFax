@@ -15,6 +15,12 @@ def create_app():
     @app.route('/')
     def hello():
         return 'Hello, PetFax!'
+
+    # REGISTER PET BLUEPRINT
+    # above return in create_app, import pet file
+    from . import pet
+    # call register_blueprint method and pass in pet blueprint
+    app.register_blueprint(pet.bp)
     
     # return app instance at the end of the factory
     return app
