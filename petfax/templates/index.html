@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>Welcome to PetFax</h1>
+
+    <!-- loop through pets -->
+    {% for pet in pets: %}
+        <h2>{{ pet.pet_name }}</h2>
+        <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+    <!-- ending statement!! -->
+    {% endfor %}
 </body>
 </html>
