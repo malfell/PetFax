@@ -23,3 +23,15 @@ bp = Blueprint(
 def index():
     # to get the pet data info, must pass pets as a second arg
     return render_template('index.html', pets=pets)
+
+
+# SHOW PET ROUTE
+# the id is an int, so need to have int before id
+# probably best to search pet by id in case two pets have same name
+@bp.route('/<int:id>')
+def show_pet(id):
+    # return f"The pet id is: {id}"
+    # need to seek out specific pet's idea
+    # and subtract 1 from the id since python index starts at 0
+    pet = pets[id-1]
+    return render_template('show.html', pet=pet)

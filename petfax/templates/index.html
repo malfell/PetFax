@@ -12,7 +12,16 @@
     <!-- loop through pets -->
     {% for pet in pets: %}
         <h2>{{ pet.pet_name }}</h2>
-        <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+        <img src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}"/>
+        <!-- link to show page -->
+        <br>
+        <button>
+            <a href="/pets/{{pet.pet_id}}">
+                Learn more about {{ pet.pet_name }}
+            </a>
+        </button>
+
+                
     <!-- ending statement!! -->
     {% endfor %}
 </body>
