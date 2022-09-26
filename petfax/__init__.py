@@ -21,6 +21,10 @@ def create_app():
     from . import pet
     # call register_blueprint method and pass in pet blueprint
     app.register_blueprint(pet.bp)
+
+    # REGISTER NEW FACT BLUEPRINT
+    from . import fact
+    app.register_blueprint(fact.bp)
     
     # return app instance at the end of the factory
     return app
