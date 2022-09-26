@@ -8,5 +8,32 @@
 </head>
 <body>
     <p>New Facts route</p>
+    <!-- ADD NEW FACT FORM -->
+    <form>
+        <!-- PERSON'S NAME -->
+        <div class="form-group">
+            <label html="submitter">Name</label>
+            <span class="required-field">*</span>
+            <input class="form-control" id="submitter" name="submitter" required>
+        </div>
+
+        <!-- FACT -->
+        <div class="form-group">
+            <label html="fact">Fact</label>
+            <span class="required-field">*</span>
+            <textarea name="fact" required></textarea>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <input type="submit" value="Add Fact">
+
+        <!-- GO BACK BUTTON -->
+        <button>
+            <a href="/pets">
+                Go Back
+            </a>
+        </button>
+
+    </form>
 </body>
 </html>
