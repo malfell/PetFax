@@ -1,3 +1,130 @@
 body {
-    background-color: tan;
+    background-color: rgb(246, 252, 211);
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 15%;
+    border: 5px solid rgb(246, 252, 211);
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(229, 215, 177);
+    border-radius: 25%;
+    margin: 1em;
+    padding: .5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* removing underline under link buttons */
+a:link { 
+    text-decoration: none; 
+}
+
+
+a:visited { 
+    text-decoration: none; 
+    color: black;
+}
+
+a:hover { 
+    text-decoration: none; 
+    color: black;
+}
+
+
+a:active { 
+    text-decoration: none; 
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(229, 215, 177);
+    border-radius: 15%;
+    margin: 1em;
+    padding: 1em;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.show-wrapper {
+    background-color: rgb(229, 215, 177);
+    border-radius: 15%;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.fact-wrapper {
+    background-color: rgb(229, 215, 177);
+    border-radius: 15%;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.form-group {
+    padding: .5em;
+}
+
+button {
+    margin: 1em;
+    border-radius: 25%;
+    text-align: center;
+    font-size: 1em;
+    padding: .5em;
+    color: black;
+    transition-duration: 0.4s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.pet-button {
+    border: 5px solid rgb(246, 252, 211);
+    background-color: rgb(172, 156, 110);
+}
+
+.pet-button:hover {
+    background-color: rgb(126, 111, 68); 
+    color: rgb(0, 0, 0);
+}
+
+.back-button {
+    border: 5px solid rgb(123, 127, 97);
+    background-color: rgb(172, 156, 110);
+}
+
+.back-button:hover {
+    background-color: rgb(126, 111, 68); 
+    color: rgb(0, 0, 0);
+}
+
+.fact-button {
+    margin: 1em;
+    border-radius: 25%;
+    text-align: center;
+    font-size: 1em;
+    border: 5px solid rgb(60, 114, 65);
+    padding: .5em;
+    background-color: rgb(138, 192, 143);
+    color: black;
+    transition-duration: 0.4s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.fact-button:hover {
+    background-color: rgb(87, 155, 93); 
+    color: rgb(0, 0, 0);
+}
+
+/* adding red to the required field asterisks */
+.required-field {
+    color: red;
 }

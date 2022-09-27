@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetFax</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
 </head>
@@ -12,25 +13,35 @@
     <h1>Welcome to PetFax</h1>
 
     <!-- loop through pets -->
-    {% for pet in pets: %}
-        <h2>{{ pet.pet_name }}</h2>
-        <img src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}"/>
-        <!-- link to show page -->
-        <br>
-        <button>
-            <a href="/pets/{{pet.pet_id}}">
-                Learn more about {{ pet.pet_name }}
-            </a>
-        </button>
-    <!-- ending statement!! -->
-    {% endfor %}
+    <div class="wrapper">
+        {% for pet in pets: %}
+            <div>
+                <h2>{{ pet.pet_name }}</h2>
+                <img src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}"/>
+                <!-- link to show page -->
+                <br>
+                <button class="pet-button">
+                    <a href="/pets/{{pet.pet_id}}">
+                        Learn more about {{ pet.pet_name }}
+                    </a>
+                </button>
+            </div>
+
+        <!-- ending statement!! -->
+        {% endfor %}
+
+    </div>
+    
 
     <!-- ADD NEW FACT -->
     <br />
-    <button>
-        <a href="/facts/new">
-            Add New Pet Fact
-        </a>
-    </button>
+    <div class="wrapper">
+        <button class="fact-button">
+            <a href="/facts/new">
+                Add New Pet Fact
+            </a>
+        </button>
+    </div>
+
 </body>
 </html>
