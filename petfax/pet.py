@@ -22,7 +22,7 @@ bp = Blueprint(
 @bp.route('/')
 def index():
     # to get the pet data info, must pass pets as a second arg
-    return render_template('index.html', pets=pets)
+    return render_template('pets/index.html', pets=pets)
 
 
 # SHOW PET ROUTE
@@ -34,4 +34,4 @@ def show_pet(id):
     # need to seek out specific pet's idea
     # and subtract 1 from the id since python index starts at 0
     pet = pets[id-1]
-    return render_template('show.html', pet=pet)
+    return render_template('pets/show.html', pet=pet)

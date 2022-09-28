@@ -4,12 +4,30 @@
 
 # import Flask
 from flask import Flask
+# import flask_migrate
+from flask_migrate import Migrate
 
 # APPLICATION FACTORY
 # define app factory
 def create_app():
     # create new app instance of Flask
     app = Flask(__name__)
+
+    # SQL Alchemy stuff
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:5432/petfax'
+    # set modifications on app's config object to false
+    # if True, it tracks modifications of objects--feature isn't needed
+    # if left unset, the value defaults to None, which takes extra memory--BAD
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+    # import models
+    from . import models
+    # got access to SQLAlchemy class methods through models.db now
+    # call init_app method on it and pass it the app instance
+    models.db.init_app(app)
+
+    # migrate stuff
+    migrate = Migrate(app, models.db)
 
     # INDEX ROUTE
     @app.route('/')
