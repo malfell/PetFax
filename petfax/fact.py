@@ -46,4 +46,13 @@ def index():
         # redirect to facts page
         return redirect('/facts')
 
-    return render_template('facts/index.html')
+    # GET REQUEST -make sure it's out of the if statement
+    # retrieve all rows on the Fact model
+    results = models.Fact.query.all()
+
+    # print the data in terminal for testing (keeping for future reference)
+    # for result in results:
+    #     print(result)
+
+    # pass results to the render_template method
+    return render_template('facts/index.html', facts=results)

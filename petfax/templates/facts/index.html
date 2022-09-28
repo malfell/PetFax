@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>UserFax</h1>
+    <!-- FACT LOOP -->
+    <div>
+        {% for fact in facts: %}
+            <h4>Submitted by {{ fact.submitter }} </h4>
+            {{ fact.fact }}
+        
+        {% endfor %}
+
+    </div>
 </body>
 </html>
